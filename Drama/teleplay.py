@@ -25,16 +25,16 @@ class Teleplay(object):
         return self.get_urls(), 'teleplay', self.name
 
     def index(self, request):
-        data = {}
+        result = {}
         total = Drama.objects.filter().all().count()
         rows = Drama.objects.all().order_by('-LOAD_TIME')[1:10]
         for rows in rows:
-            data['total'] = total
-            data['rows'].append({
+            result['total'] = total
+            result['rows'].append({
                 'name': rows.name,
                 'img': rows.img,
             })
-        return render(request, 'index.html', data)
+        return render(request, 'index.html', result)
 
     # 未处理报警
     def unhandle_alarm_show(self, request):

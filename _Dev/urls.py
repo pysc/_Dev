@@ -20,5 +20,5 @@ from django.shortcuts import redirect
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^index/', include(drama.urls), name='student'),
+    url(r'^', include(drama.urls), name='drama'),
 ]

@@ -14,7 +14,7 @@ class Drama(object):
         from django.conf.urls import url, include
 
         urlpatterns = [
-            url(r'^teleplay/', include(teleplay.urls), name="teleplay"),
+            url(r'^', include(teleplay.urls), name="teleplay"),
             # url(r'^dispatch/', include(dispatch.urls), name='dispatch'),
             # url(r'^alarm/', include(alarm.urls), name='alarm'),
             # url(r'^config/', include(config.urls), name='config'),
